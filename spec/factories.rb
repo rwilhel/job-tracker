@@ -10,4 +10,8 @@ FactoryGirl.define do
     city "CityJob"
     company
   end
+
+  factory :category do
+    title "Finance"
+  end
 end
