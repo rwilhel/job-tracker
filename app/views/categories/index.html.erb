@@ -1,0 +1,7 @@
+<h3>All Categories</h3>
+
+<% @categories.each do |category| %>
+  <div class=category_<%= category.id %>>
+    <%= link_to category.title, category_path(category) %>
+  </div>
+<% end %>
