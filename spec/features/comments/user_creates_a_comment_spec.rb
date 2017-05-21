@@ -5,7 +5,7 @@ describe "User creates a comment" do
     job = create(:job)
 
     visit company_job_path(job.company, job)
-e
+
     fill_in "comment[content]", with: "Here is a single comment"
     click_on "Create Comment"
 
