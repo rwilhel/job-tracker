@@ -10,8 +10,8 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      # flash[:success] = "#{@category.title} added!"
-      redirect_to category_path(@category)
+      flash[:success] = "#{@category.title} added!"
+      redirect_to (@category)
     else
       render :new
     end
@@ -19,6 +19,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    @jobs = @category.jobs
   end
 
   def edit

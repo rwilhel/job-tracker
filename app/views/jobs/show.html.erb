@@ -11,3 +11,6 @@ City: <%= @job.city %>
 <br>
 
 Company: <%= link_to @job.company.name, company_path(@job.company) %>
+<br>
+
+Category: <%= link_to @job.category.title, category_path(@job.category) if @job.category %>
