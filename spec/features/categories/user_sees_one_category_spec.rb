@@ -12,6 +12,5 @@ describe "User sees a specific category" do
     category.jobs.each do |job|
       expect(page).to have_link job.title, company_job_path(job.company, job)
     end
-        save_and_open_page
   end
 end

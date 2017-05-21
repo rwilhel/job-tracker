@@ -28,4 +28,10 @@ FactoryGirl.define do
       end
     end
   end
+
+  sequence(:content) { |n| "Here is my comment #{n}" }
+  factory :comment do
+    content
+  end
+
 end
