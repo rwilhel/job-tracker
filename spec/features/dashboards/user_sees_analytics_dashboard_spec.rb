@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "User sees analytics" do
-  scenario "a user sees a job count by level of interest" do
+  xscenario "a user sees a job count by level of interest" do
     company = create(:company)
     job = create(:job)
 
