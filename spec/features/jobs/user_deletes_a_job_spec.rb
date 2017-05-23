@@ -10,6 +10,6 @@ describe "User deletes an existing job" do
       click_link "Delete"
     end
 
-    expect(page).to have_content("Developer was successfully deleted!")
+    expect(page).to have_content("#{job.title} was successfully deleted!")
   end
 end

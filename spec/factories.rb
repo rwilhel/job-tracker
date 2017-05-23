@@ -3,10 +3,16 @@ FactoryGirl.define do
   sequence(:name) { |n| "ESPN #{n}" }
   factory :company do
     name
+
+    factory :company_with_jobs do
+      after(:create) do |company|
+        company.jobs = create_list(:category_with_jobs, 10)
+      end
+    end
   end
 
   factory :job do
-    title "Developer"
+    sequence(:title) { |n| "Developer #{n}" }
     description "JobDescription"
     level_of_interest 50
     city "CityJob"
@@ -14,7 +20,6 @@ FactoryGirl.define do
     category
   end
 
-  # sequence(:title) { |n| "Finance #{n}" }
   factory :category do
     title "Finance"
 
